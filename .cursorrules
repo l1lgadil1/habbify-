@@ -1,0 +1,38 @@
+Tech Stack:
+- React
+- Next.js
+- Tailwind CSS
+- TypeScript
+- Shadcn UI
+- Supabase
+
+Project Architecture: FSD (Feature-Sliced Design) https://feature-sliced.design/
+
+About the project:
+Habbify - Habit tracker for your habits. Users can create habits, track their progress, and see their habits in a list. 
+Main functionality:
+- User can use CRUD oeprations on a habbit  
+- User can track their progress on a habit
+- User can see their habits in a list
+- User can see their progress on a habit
+- Habbits are stored in Supabase
+- All habbits are displayed in a list
+- List is the calendar view
+- Once the day of expected habbit is touched, the habbit is marked as completed or not completed (it depends on the user)
+- Completed day is highlighted in the list
+- In list user can view the history of the habbit, and the history is displayed in the calendar view
+- List also has "Goal" count, which is the number of days in a row that the user has completed the habbit and the "Achieved" count, which is the number of days in a row that the user has achieved the goal
+- User cannot edit the future days of the habbit, only the past days
+- Application should be responsive and look good on both mobile and desktop
+- There should be an AI assistant that helps the user to create a habbit, makes them suggestions
+- There should be a "Analysis" page, where the user can see the analysis of their habits, and the analysis is displayed in the calendar view.
+- In the "Analysis" page there also a summary and suggestions for the user
+- There should be black and white themes
+- There should be a "Settings" page, where the user can change the theme, language, and other settings
+- Use blue color #2463EB for the main color 
+- There should be a landing main page where the main features are presented
+- There should be auth with Supabase
+
+
+Use the existing UI only. Create UI if its needed.
+Always separate the UI from the logic.
