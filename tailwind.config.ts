@@ -1,62 +1,63 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
+import animate from 'tailwindcss-animate';
 
 export default {
-    darkMode: ["class"],
+    darkMode: ['class'],
     content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-  	extend: {
-  		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
-  			},
-  			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
-  			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
-  			muted: {
-  				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground))'
-  			},
-  			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
-  			},
-  			destructive: {
-  				DEFAULT: 'hsl(var(--destructive))',
-  				foreground: 'hsl(var(--destructive-foreground))'
-  			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
-  			}
-  		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		}
-  	}
-  },
-  plugins: [require("tailwindcss-animate")],
+        './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    theme: {
+        extend: {
+            colors: {
+                border: 'var(--border-primary)',
+                input: 'var(--border-primary)',
+                ring: 'var(--brand-primary)',
+                background: 'var(--background-primary)',
+                foreground: 'var(--text-primary)',
+                primary: {
+                    DEFAULT: 'var(--brand-primary)',
+                    foreground: '#FFFFFF',
+                },
+                secondary: {
+                    DEFAULT: 'var(--background-surface)',
+                    foreground: 'var(--text-primary)',
+                },
+                destructive: {
+                    DEFAULT: 'var(--status-error)',
+                    foreground: '#FFFFFF',
+                },
+                muted: {
+                    DEFAULT: 'var(--background-surface)',
+                    foreground: 'var(--text-secondary)',
+                },
+                accent: {
+                    DEFAULT: 'var(--brand-accent)',
+                    foreground: '#FFFFFF',
+                },
+                popover: {
+                    DEFAULT: 'var(--background-card)',
+                    foreground: 'var(--text-primary)',
+                },
+                card: {
+                    DEFAULT: 'var(--background-card)',
+                    foreground: 'var(--text-primary)',
+                },
+            },
+            borderRadius: {
+                lg: 'var(--radius-lg)',
+                md: 'var(--radius-md)',
+                sm: 'var(--radius-sm)',
+            },
+            boxShadow: {
+                sm: 'var(--shadow-sm)',
+                DEFAULT: 'var(--shadow-md)',
+                md: 'var(--shadow-md)',
+                lg: 'var(--shadow-lg)',
+                xl: 'var(--shadow-xl)',
+            },
+        },
+    },
+    plugins: [animate],
 } satisfies Config;
